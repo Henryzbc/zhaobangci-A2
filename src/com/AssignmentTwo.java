@@ -61,10 +61,14 @@ public class AssignmentTwo {
     }
     public void partFourB(){
         List<Visitor> list = createVisitor();
+        //Add a minimum of 5 Visitors to the collection.
         list.forEach(item->rideInterface.addVisitorToHistory(item));
+        //Print all Visitors in the collection.
         rideInterface.printRideHistory();
+        //Sort the collection
         Collections.sort(list,new VisitorComparator());
         System.out.println("Collections:");
+        //Print all Visitors in the collection again to show that the collection has been sorted.
         list.forEach(item-> System.out.println(item.toString()));
         rideInterface.clear();
     }
@@ -93,11 +97,11 @@ public class AssignmentTwo {
     }
 
     private List<Visitor> createVisitor(){
-        Visitor one = new Visitor("one","20","man","20",new Date());
-        Visitor tow = new Visitor("tow","18","man","20",new Date());
-        Visitor three = new Visitor("three","30","man","20",new Date());
-        Visitor four = new Visitor("four","33","man","20",new Date());
-        Visitor five = new Visitor("five","60","man","20",new Date());
+        Visitor one = new Visitor("Mr Zhao","20","man","40",new Date());
+        Visitor tow = new Visitor("Mr Wang","18","man","40",new Date());
+        Visitor three = new Visitor("Mr Liu","30","woman","40",new Date());
+        Visitor four = new Visitor("Mr Li","33","woman","40",new Date());
+        Visitor five = new Visitor("Mr Zhang","60","man","40",new Date());
         List<Visitor> list = new ArrayList<>();
         list.add(one);
         list.add(tow);
