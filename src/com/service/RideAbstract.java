@@ -3,6 +3,7 @@ package com.service;
 import com.po.Ride;
 import com.po.Visitor;
 
+// Abstract class
 public abstract class RideAbstract {
     public abstract void addVisitorToQueue(Visitor visitor);
     public abstract void removeVisitorToQueue(Visitor visitor);
