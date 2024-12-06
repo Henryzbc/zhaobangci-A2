@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+//Queue
 public class RideInterfaceImpl extends RideAbstract implements RideInterface {
     private static Deque<Visitor> visitorDeque = new LinkedList<>();
     private static Deque<Visitor> historyDeque = new LinkedList<>();
@@ -21,7 +22,7 @@ public class RideInterfaceImpl extends RideAbstract implements RideInterface {
     public void addVisitorToQueue(Visitor visitor) {
         try {
             visitorDeque.addFirst(visitor);
-            System.out.println("addVisitorToQueue Success");
+            System.out.println("addVisitorToQueue Success -- " + visitor);
         }catch (Exception e){
             System.out.println("addVisitorToQueue error");
         }
@@ -62,7 +63,7 @@ public class RideInterfaceImpl extends RideAbstract implements RideInterface {
     public void addVisitorToHistory(Visitor visitor) {
         try {
             historyDeque.addFirst(visitor);
-            System.out.println("addVisitorToHistory Success");
+            System.out.println("addVisitorToHistory Success -- "+visitor);
         }catch (Exception e){
             System.out.println("addVisitorToHistory error");
         }
